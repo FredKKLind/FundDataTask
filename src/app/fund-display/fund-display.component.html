@@ -1,0 +1,10 @@
+<ul>
+    <div *ngIf="data">
+      <div *ngFor="let item of data[0]?.data">
+        <!-- {{ item | json }} --> <!-- Log the entire item to the console -->
+        <p>Fund Name: {{ item.fundName }}</p>
+        <p>Rate: {{ item.rate }}</p>
+        <p>Change 1Y: {{ item.change1y }}</p>
+      </div>
+    </div>
+  </ul>
