@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+html, body{
+    padding: 3vh;
+    font-family: 'Verdana', sans-serif;
+  }
+  
+html{
+    background: linear-gradient(to bottom, transparent, #ddd);
+  }

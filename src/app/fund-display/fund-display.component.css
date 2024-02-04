@@ -1,15 +1,19 @@
 table {
     width: 100%;
     border-collapse: collapse;
+    border: 1px solid #ddd;
     margin-bottom: 20px;
   }
   
   th, td {
-    border: 1px solid #ddd;
-    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    padding: 15px;
     text-align: center;
+    height: 20px;
   }
   
-  th {
-    background-color: #eee;
-  }
+  th {background-color: #eee;}
+  
+  tr:nth-child(odd) {background-color: #fff;}
+  tr:nth-child(even) {background-color: #f9f9f9;}
+  tr:hover {background-color: azure;}
