@@ -1,10 +1,24 @@
-<ul>
-    <div *ngIf="data">
-      <div *ngFor="let item of data[0]?.data">
-        <!-- {{ item | json }} --> <!-- Log the entire item to the console -->
-        <p>Fund Name: {{ item.fundName }}</p>
-        <p>Rate: {{ item.rate }}</p>
-        <p>Change 1Y: {{ item.change1y }}</p>
-      </div>
-    </div>
-  </ul>
+<table *ngIf="data">
+  <thead>
+    <tr>
+      <th>Instrument ID</th>
+      <th>Fund Name</th>
+      <th>Rate</th>
+      <th>Change 1 month</th>
+      <th>Change 3 months</th>
+      <th>Change 3 years</th>
+      <th>Est. Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of data[0]?.data">
+      <td>{{ item.instrumentId }}</td>
+      <td>{{ item.fundName }}</td>
+      <td>{{ item.rate }}</td>
+      <td>{{ item.change1m }}</td>
+      <td>{{ item.change3m }}</td>
+      <td>{{ item.change3y }}</td>
+      <td>{{ getFormattedDate(item.estimationDate) }}</td>
+    </tr>
+  </tbody>
+</table>
