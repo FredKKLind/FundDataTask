@@ -5,5 +5,7 @@ html, body{
   }
   
 html{
-    background: linear-gradient(to bottom, transparent, #ddd);
+    background: linear-gradient(to bottom, #ddd, transparent);
   }
+
+

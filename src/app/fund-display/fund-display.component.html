@@ -1,19 +1,19 @@
 <div>
-  <table *ngIf="data">
+  <table *ngIf="data" [ngClass]="{'responsive-table': isMobile}">
     <thead>
       <tr>
-        <th>Instrument ID</th>
-        <th>Fund Name</th>
-        <th>Rate</th>
-        <th>Change 1 month</th>
-        <th>Change 3 months</th>
-        <th>Change 1 year</th>
-        <th>Change 3 years</th>
-        <th>Est. Date</th>
+        <th (click)="sortData('instrumentId')">Instrument ID</th>
+        <th (click)="sortData('fundName')">Fund Name</th>
+        <th (click)="sortData('rate')">Rate</th>
+        <th (click)="sortData('change1m')">Change 1 month</th>
+        <th (click)="sortData('change3m')">Change 3 months</th>
+        <th (click)="sortData('change1y')">Change 1 year</th>
+        <th (click)="sortData('change3y')">Change 3 years</th>
+        <th (click)="sortData('estimationDate')">Est. Date</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let item of data[0]?.data">
+      <tr *ngFor="let item of sortedData">
         <td>{{ item.instrumentId }}</td>
         <td>{{ item.fundName }}</td>
         <td>{{ item.rate }}</td>
