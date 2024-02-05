@@ -1,15 +1,28 @@
+<div class="topnav">
+  <a href="#home">Home</a>
+  <a href="#menu">Menu</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+  <div id="account">
+    <a href="#account" id="account">Account ▸</a>
+    <div class="dropdown">
+        <a href="#register" id="popup">Register</a>
+        <a href="#login" id="popup">Login</a>
+    </div>
+</div>
+</div>
 <div>
-  <table *ngIf="data" [ngClass]="{'responsive-table': isMobile}">
+  <table *ngIf="data">
     <thead>
       <tr>
-        <th (click)="sortData('instrumentId')">Instrument ID</th>
-        <th (click)="sortData('fundName')">Fund Name</th>
-        <th (click)="sortData('rate')">Rate</th>
-        <th (click)="sortData('change1m')">Change 1 month</th>
-        <th (click)="sortData('change3m')">Change 3 months</th>
-        <th (click)="sortData('change1y')">Change 1 year</th>
-        <th (click)="sortData('change3y')">Change 3 years</th>
-        <th (click)="sortData('estimationDate')">Est. Date</th>
+        <th (click)="sortData('instrumentId')"><span id="hide">Sort by&nbsp;</span>Instrument ID</th>
+        <th (click)="sortData('fundName')"><span id="hide">Sort by&nbsp;</span>Fund Name</th>
+        <th (click)="sortData('rate')"><span id="hide">Sort by&nbsp;</span>Rate</th>
+        <th (click)="sortData('change1m')"><span id="hide">Sort by&nbsp;</span>Change 1 month</th>
+        <th (click)="sortData('change3m')"><span id="hide">Sort by&nbsp;</span>Change 3 months</th>
+        <th (click)="sortData('change1y')"><span id="hide">Sort by&nbsp;</span>Change 1 year</th>
+        <th (click)="sortData('change3y')"><span id="hide">Sort by&nbsp;</span>Change 3 years</th>
+        <th (click)="sortData('estimationDate')"><span id="hide">Sort by&nbsp;</span>Est. Date</th>
       </tr>
     </thead>
     <tbody>

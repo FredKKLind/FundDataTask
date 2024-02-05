@@ -54,9 +54,4 @@ export class FundDisplayComponent implements OnInit{
       }
     });
   }
-  
-  @HostListener('window:resize', ['$event'])
-  onResize(event: any): void {
-    this.isMobile = window.innerWidth <= 768;
-  }
 }
