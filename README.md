@@ -1,6 +1,10 @@
-# Test
+# FundAppTest
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.1.
+
+## IMPORTANT
+
+Run `ng add @angular/material`, it's required!
 
 ## Development server
 
@@ -28,4 +32,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## IMPORTANT
 
-Do run "ng add @angular/material", it's required!
+Run `ng add @angular/material`, it's required!
