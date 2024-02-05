@@ -20,6 +20,7 @@ export class FundDisplayComponent implements OnInit{
     this.fetchData();
   }
   
+  // Fetches the data and stores it in data and sortedData
   fetchData() {
     this.httpClient
       .get<any[]>('https://ivarpivar.netlify.app/api')
@@ -29,6 +30,7 @@ export class FundDisplayComponent implements OnInit{
       });
   }
 
+  // Formats the 'timestamp'-number from milliseconds to actual date.
   getFormattedDate(timestamp: number): string {
     const date = new Date(timestamp);
     const year = date.getFullYear();
@@ -37,13 +39,17 @@ export class FundDisplayComponent implements OnInit{
     return `${year}-${month}-${day}`;
   }
   
+  // Sorts columns
   sortData(column: string): void {
+    // Checks if 'clicked' column is the same as the temporarily saved column, if true then it switches the sortOrder.
     if (this.sortColumn === column) {
       this.sortOrder *= -1;
     } else {
       this.sortColumn = column;
       this.sortOrder = 1;
     }
+    // Does the actual sorting, checks if values in the columns are strings or other (numbers), 
+    // compares/subtracts accordingly, then mulipliers with sortOrder to then return ASC or DESC sorting order.
     this.sortedData.sort((a, b) => {
       const Value1 = a[column];
       const Value2 = b[column];
